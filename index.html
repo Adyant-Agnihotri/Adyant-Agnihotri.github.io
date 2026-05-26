@@ -21,7 +21,227 @@
   display: block;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
+.hero {
+  padding: 4.5rem 0 4rem;
+}
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.hero-text {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.hero-visual {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #eef3f6 100%);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 0.8rem;
+  min-height: 520px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  display: block;
+}
+
+.mech-overlay {
+  position: absolute;
+  color: rgba(15, 118, 110, 0.24);
+  pointer-events: none;
+}
+
+.gear-spin {
+  width: 110px;
+  height: 110px;
+  right: 16px;
+  top: 16px;
+  animation: spinGear 14s linear infinite;
+}
+
+.gear-spin-reverse {
+  width: 84px;
+  height: 84px;
+  left: 18px;
+  bottom: 18px;
+  animation: spinGearReverse 12s linear infinite;
+}
+
+.mech-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.mech-card {
+  width: 100%;
+  height: auto;
+  color: var(--accent);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: visible;
+}
+
+.mech-card rect,
+.mech-card line,
+.mech-card path,
+.mech-card circle {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.bars-card .bar {
+  fill: rgba(15, 118, 110, 0.18);
+  stroke: rgba(15, 118, 110, 0.85);
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.wave-card .wave-path {
+  stroke-dasharray: 12 8;
+  animation: waveMove 3.5s linear infinite;
+}
+
+.pulse-card path,
+.pulse-card circle {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+.linkage-card {
+  animation: floatCard 3.2s ease-in-out infinite;
+}
+
+.bars-card .b1 { animation: barsMove1 1.9s ease-in-out infinite; }
+.bars-card .b2 { animation: barsMove2 2.2s ease-in-out infinite; }
+.bars-card .b3 { animation: barsMove3 1.8s ease-in-out infinite; }
+.bars-card .b4 { animation: barsMove4 2.1s ease-in-out infinite; }
+.bars-card .b5 { animation: barsMove5 2.4s ease-in-out infinite; }
+
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+@keyframes spinGear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinGearReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes waveMove {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -40; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes barsMove1 {
+  0%, 100% { transform: scaleY(0.85); }
+  50% { transform: scaleY(1.1); }
+}
+@keyframes barsMove2 {
+  0%, 100% { transform: scaleY(1.05); }
+  50% { transform: scaleY(0.82); }
+}
+@keyframes barsMove3 {
+  0%, 100% { transform: scaleY(0.92); }
+  50% { transform: scaleY(1.12); }
+}
+@keyframes barsMove4 {
+  0%, 100% { transform: scaleY(1.08); }
+  50% { transform: scaleY(0.88); }
+}
+@keyframes barsMove5 {
+  0%, 100% { transform: scaleY(0.9); }
+  50% { transform: scaleY(1.06); }
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo-wrap {
+    min-height: auto;
+  }
+
+  .hero-photo {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mech-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gear-spin,
+  .gear-spin-reverse,
+  .wave-card .wave-path,
+  .pulse-card path,
+  .pulse-card circle,
+  .linkage-card,
+  .bars-card .b1,
+  .bars-card .b2,
+  .bars-card .b3,
+  .bars-card .b4,
+  .bars-card .b5 {
+    animation: none !important;
+  }
+}
 .project-link:hover {
   transform: translateY(-4px);
   border-color: var(--accent);
