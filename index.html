@@ -15,7 +15,18 @@
       --accent-dark: #0b5e58;
       --max: 1100px;
     }
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
 
+.project-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -190,30 +201,64 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div class="container">
-        <h2>Selected Projects</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Mini Solar VTOL Drone</h3>
-            <p class="muted">UNSW Team Project</p>
-            <p>Worked on flight testing, aerodynamic analysis, and mechanical integration of solar payload systems for a solar-powered VTOL drone concept.</p>
-          </article>
+  <section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="muted">Click any project to open a dedicated page with more detail, images, and deliverables.</p>
 
-          <article class="card">
-            <h3>Transgrid Operability Project</h3>
-            <p class="muted">Industry-linked university project</p>
-            <p>Contributed to recommendations aimed at improving operability and decision-making through analytical methods and structured team problem-solving.</p>
-          </article>
+    <div class="grid">
+      <a class="card project-link" href="purple-house.html">
+        <h3>Purple House</h3>
+        <p class="muted">Uni Project · Sep–Dec 2022</p>
+      </a>
 
-          <article class="card">
-            <h3>Thesis / Research Work</h3>
-            <p class="muted">UNSW</p>
-            <p>Research experience involving materials, testing, and technical analysis. Replace this text later with a clearer summary of your thesis topic.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <a class="card project-link" href="transgrid.html">
+        <h3>Transgrid Operability Project</h3>
+        <p class="muted">Internship · Sep–Dec 2024</p>
+      </a>
+
+      <a class="card project-link" href="desn2000-project.html">
+        <h3>DESN2000 Project</h3>
+        <p class="muted">Uni Project · 2024</p>
+      </a>
+
+      <a class="card project-link" href="smart-sole.html">
+        <h3>Smart Sole</h3>
+        <p class="muted">Uni Project · May–Aug 2025</p>
+      </a>
+
+      <a class="card project-link" href="fasteners-project.html">
+        <h3>Fasteners Project</h3>
+        <p class="muted">Uni Project · Feb–May 2025</p>
+      </a>
+
+      <a class="card project-link" href="gearbox-project.html">
+        <h3>Gearbox Project</h3>
+        <p class="muted">Uni Project · Feb–May 2025</p>
+      </a>
+
+      <a class="card project-link" href="vtol-drone.html">
+        <h3>Mini Solar VTOL Drone</h3>
+        <p class="muted">Uni Project · 2025</p>
+      </a>
+
+      <a class="card project-link" href="anish-pharma.html">
+        <h3>Anish Pharma Internship</h3>
+        <p class="muted">Internship · Dec 2025–Feb 2026</p>
+      </a>
+
+      <a class="card project-link" href="mufflers-acoustics.html">
+        <h3>Mufflers / Acoustics Project</h3>
+        <p class="muted">Uni Project · 2025–2026</p>
+      </a>
+
+      <a class="card project-link" href="structural-batteries-thesis.html">
+        <h3>Structural Batteries Thesis</h3>
+        <p class="muted">Honours Thesis · 2026</p>
+      </a>
+    </div>
+  </div>
+</section>
 
     <section id="experience">
       <div class="container">
