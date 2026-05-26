@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adyant Agnihotri | Engineering Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --line: #d8dee8;
+      --accent: #0f766e;
+      --accent-dark: #0b5e58;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 5rem 0 4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--line);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+    }
+
+    section {
+      padding: 3.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.3rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    .muted { color: var(--muted); }
+
+    ul { padding-left: 1.2rem; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+      }
+
+      nav a {
+        margin: 0 1rem 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">ADYANT AGNIHOTRI</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="muted">Final-year Mechanical Engineering student at UNSW</p>
+      <h1>Mechanical engineering portfolio focused on manufacturing, technical problem-solving, and project work.</h1>
+      <p>
+        I’m Adyant Agnihotri, a final-year Mechanical Engineering student at UNSW graduating in August 2026. I’m interested in graduate roles across manufacturing, project engineering, HVAC, operations, and technical services.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="#contact">Contact Me</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          This website is my engineering portfolio. It highlights selected academic, internship, and team-based experiences that reflect my technical foundation, project exposure, and interest in solving practical engineering problems.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Mini Solar VTOL Drone</h3>
+            <p class="muted">UNSW Team Project</p>
+            <p>Worked on flight testing, aerodynamic analysis, and mechanical integration of solar payload systems for a solar-powered VTOL drone concept.</p>
+          </article>
+
+          <article class="card">
+            <h3>Transgrid Operability Project</h3>
+            <p class="muted">Industry-linked university project</p>
+            <p>Contributed to recommendations aimed at improving operability and decision-making through analytical methods and structured team problem-solving.</p>
+          </article>
+
+          <article class="card">
+            <h3>Thesis / Research Work</h3>
+            <p class="muted">UNSW</p>
+            <p>Research experience involving materials, testing, and technical analysis. Replace this text later with a clearer summary of your thesis topic.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Anish Pharma Equip Pvt Ltd</h3>
+            <p class="muted">Intern – QA, New Product Development & Manufacturing</p>
+            <p>Observed and learned how pharmaceutical machinery such as FBDs and RMGs is designed, documented, tested, and delivered across the project lifecycle.</p>
+          </article>
+
+          <article class="card">
+            <h3>Leadership</h3>
+            <p class="muted">Warrane College</p>
+            <p>Held leadership roles involving event planning, coordination, and communication with a range of stakeholders in academic and professional settings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:adyantshivagnihotri@gmail.com">adyantshivagnihotri@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/adyant-agnihotri-91785621b" target="_blank" rel="noopener noreferrer">linkedin.com/in/adyant-agnihotri-91785621b</a></p>
+        <p class="muted">You can also add your resume PDF here later.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Adyant Agnihotri. Built for GitHub Pages.</p>
+    </div>
+  </footer>
+</body>
+</html>
